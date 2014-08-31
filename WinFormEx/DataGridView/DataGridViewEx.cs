@@ -83,9 +83,11 @@ namespace WinFormEx
             _dgv.Rows.Clear();
             _dgv.Tag = obj;
 
-            if (IsSimpleType(obj.GetType()))
+            Type type = obj.GetType();
+            if (IsSimpleType(type))
             {
-
+                DataGridViewRow row = 
+                    type.Name;
             }
             /*
             PropertyInfo[] propertyInfos;
